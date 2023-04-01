@@ -1,0 +1,19 @@
+======================================================================
+CS2110                         Lab #18                     Spring 2019
+======================================================================
+
+(This lab is collaborative, so feel free to work with friends or TAs.)
+
+Objective: To learn how to use malloc
+
+================
+Your Assignment:
+================
+
+Look into the file provided, dogs.c, and implement the desired functionality described in the file.
+
+When you're done, compile your code by running 'make dogs' or 'make'. Then run the code by doing './dogs'
+
+Show your TAs the correct output when running your program to get checked off early.
+
+Have fun!

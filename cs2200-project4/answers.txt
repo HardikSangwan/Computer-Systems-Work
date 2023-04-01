@@ -1,0 +1,82 @@
+CS 2200 Spring 2018
+Project 4
+
+Name: Akarsh Hemrajani
+GT Username: ahemrajani3
+
+Problem 1B
+----------
+1 CPU
+	# of Context Switches: 99
+	Total execution time: 67.6 s
+	Total time spent in READY state: 389.9 s
+
+2 CPU
+	# of Context Switches: 113
+	Total execution time: 35.8 s
+	Total time spent in READY state: 83.2 s
+
+The time decreases significantly when using 2 CPUs as compared to 1 as using 2 processor cores almost doubles the efficiency
+
+4 CPU
+	# of Context Switches: 184
+	Total execution time: 33.0 s
+	Total time spent in READY state: 0.5 s
+
+We don't see that much of a time decrease when using 4 CPUs over 2 CPUs since all 4 cores are not in use most of the time, however the time spent in READY state still decreases significantly (as the time spent in IDLE state increases).
+
+In conclusion, the total execution time decreases exponentially, and not linearly, as the number of CPUs increase because os-sim doesn't run more than 2 threads in parallel.  
+
+Problem 2B
+----------
+
+The total waiting time decreases with shorter timeslices pretty much linearly.
+
+800ms
+	# of Context Switches: 136
+	Total execution time: 67.6 s
+	Total time spent in READY state: 325.5 s
+
+600ms
+	# of Context Switches: 161
+	Total execution time: 67.6 s
+	Total time spent in READY state: 314.5 s
+
+400ms
+	# of Context Switches: 203
+	Total execution time: 67.6 s
+	Total time spent in READY state: 298.8 s
+
+200ms
+	# of Context Switches: 361
+	Total execution time: 67.5 s
+	Total time spent in READY state: 285.4 s
+
+In a real OS, the shortest timeslice possible is usually not the best choice because shorter timeslices lead to more context switches which increases the chance of cache misses and page faults.
+
+Problem 3B
+----------
+
+FIFO Scheduler
+	# of Context Switches: 99
+	Total execution time: 67.6 s
+T	otal time spent in READY state: 389.9 s
+
+Round-Robin Scheduler
+
+	800ms
+		# of Context Switches: 136
+		Total execution time: 67.6 s
+		Total time spent in READY state: 325.5 s
+
+	200ms
+		# of Context Switches: 361
+		Total execution time: 67.5 s
+		Total time spent in READY state: 285.5 s
+
+SRTF Scheduler
+	# of Context Switches: 106
+	Total execution time: 68.5 s
+	Total time spent in READY state: 184.3 s
+
+SRTF had the lowest waiting time because shorter processes are handled faster. Further, the overhead required by the simulator is also less because a decision is only made when either a process is completed or a new process is added. Even then, since the the execution time that we use to prioritize the scheduling is estimated (preempted), there's no guarantee that the process we end up selecting is actually the fastest since the execution time may vary the different processors or systems.

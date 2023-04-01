@@ -1,0 +1,32 @@
+-------------------------------- YOUR TO-DO LIST -------------------------------
+
+Buy milk
+
+Due: 26/02/2019
+Description: Drive to the store and get some milk for your cereal
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Graduate!
+
+Due: 04/05/2019
+Description: I made it!
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Wash bear
+
+Due: 10/04/2019
+Description: Bear is a bit dirty from getting hugged by too many CS majors
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Processor Design Exam
+
+Due: 27/02/2019
+Description: Learn verilog so that I don't get owned
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Grade quiz 3
+
+Due: 25/02/2019
+Description: Make sure that the quiz gets graded
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Lay siege to Constantinople
+
+Due: 29/05/1453
+Description: Need to get the trebuchets set up properly
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

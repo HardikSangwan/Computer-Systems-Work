@@ -1,0 +1,12 @@
+CS 2200 Fall 2019
+Homework 2
+
+Name:
+GT Username: Hardik Sangwan
+
+Short Answer
+----------
+
+goto using a different set of instructions
+lea $at label
+jar $zero $at

@@ -1,0 +1,84 @@
+;;====================================================
+;; CS 2110 - Spring 2019
+;; Timed Lab 3
+;; tl3.asm
+;;====================================================
+;; Name: Hardik Sangwan
+;;====================================================
+
+.orig x3000
+	
+	AND R0, R0, 0
+	AND R1, R1, 0
+	LD R2, LEN
+	LD R3, ARRAY
+	AND R4, R4, 0
+	ADD R0, R3, R2
+	LDR R0, R0, -1
+	ST R0, CHECKPOINT1
+	BRn NEGSUM
+	BRp POSSUM
+	BRz ZERSUM
+NEGSUM
+	LD R0, NEG
+	ST R0, CHECKPOINT2
+	AND R0, R0, 0
+	BR NEGSUMMER
+POSSUM
+	LD R0, POS
+	ST R0, CHECKPOINT2
+	AND R0, R0, 0
+	BR POSSUMMER
+ZERSUM
+	LD R0, ZER
+	ST R0, CHECKPOINT2
+	ST R0, CHECKPOINT3
+	BR END
+NEGSUMMER
+	ADD R5, R3, R4
+	BRn NEGSUMMER2
+	ADD R4, R4, 1
+	NOT R6, R4
+	ADD R6, R6, 1
+	ADD R6, R6, R2
+	BRp NEGSUMMER
+	BRnz END
+NEGSUMMER2
+	ADD R1, R5, R1
+	ADD R4, R4, 1
+	NOT R6, R4
+	ADD R6, R6, 1
+	ADD R6, R6, R2
+	BRp NEGSUMMER
+	BRnz END
+POSSUMMER
+	ADD R5, R3, R4
+	BRp POSSUMMER2
+	ADD R4, R4, 1
+	NOT R6, R4
+	ADD R6, R6, 1
+	ADD R6, R6, R2
+	BRp POSSUMMER
+	BRnz END
+POSSUMMER2
+	ADD R1, R5, R1
+	ADD R4, R4, 1
+	NOT R6, R4
+	ADD R6, R6, 1
+	ADD R6, R6, R2
+	BRp POSSUMMER
+	BRnz END
+
+END
+	ST R1, CHECKPOINT3
+	HALT
+
+ARRAY   .fill x5000
+LEN     .fill 6
+NEG .fill -1
+POS .fill 1
+ZER .fill 0
+CHECKPOINT1 .blkw 1
+CHECKPOINT2 .blkw 1
+CHECKPOINT3 .blkw 1
+.end
